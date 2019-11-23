@@ -1,0 +1,96 @@
+@import "vars";
+/* это работает
+&[alt='cutlery'] {
+
+  transform: rotate(0deg);
+
+  @media screen and (max-width: 1000px) {
+    transform: rotate(20deg);
+  }
+  @media screen and (max-width: 800px) {
+    transform: rotate(40deg);
+  }
+
+}
+ */
+
+@media screen and (max-width: 1200px) {
+  .nav-menu {
+      vertical-align: center;
+    .menu {
+      top: 0;
+      margin-left: 65vw !important;
+      display: block;
+
+        .menu-icon {
+          visibility: visible !important;
+        }
+
+        .add-page{
+          visibility: hidden;
+        }
+        .home {
+          visibility: hidden;
+        }
+        .menu-icon:hover  .add-page {
+          visibility: visible;
+        }
+
+      }
+    }
+
+  }
+
+
+
+@media screen and (max-width: 1400px) and (min-width: 1140px) {
+  .about {
+  background-image: url("../img/about-heading-avg.png");
+  }
+}
+
+@media screen and (max-width: 1139px)  {
+  .about {
+  background-image: url("../img/about-heading-min.png");
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1140px) {
+  .story-skills {
+    height: 1100px;
+
+    .page-content {
+      width: 560px !important;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .team-image {
+        margin-top: -25px;
+        width: 500px;
+        height: 350px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1155px)  {
+  .team {
+    height: 1650px;
+    .page-content {
+      width: 780px !important;
+
+      .team-members {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+        .team-member:first-child {
+            margin-right: 30px !important;
+          margin-bottom: 30px;
+        }
+    }
+
+  }
+  }
+
+
