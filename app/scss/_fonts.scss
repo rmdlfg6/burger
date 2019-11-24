@@ -1,7 +1,10 @@
 @import "_mixins/font-face";
 
-@include font-face("roboto-bold", "../fonts/roboto-bold");
-@include font-face("roboto-regular", "../fonts/roboto-regular");
-@include font-face("roboto-light", "../fonts/roboto-light");
-@include font-face("lato-bold", "../fonts/lato-bold");
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
 
+@include font-face("ubuntu-light", "../fonts/ubuntu-light");
+@include font-face("ubuntu-medium", "../fonts/ubuntu-medium");
+@include font-face("ubuntu-bold", "../fonts/ubuntu-bold");
+@include font-face("gagalin-regular", "../fonts/gagalin");
+@include font-face("lifehack-medium", "../fonts/lifehack");
