@@ -52,8 +52,8 @@ gulp.task('scripts', function() {
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Minify js (optional)
 	.pipe(gulp.dest('app/js')) 
-	//.pipe(browserSync.reload({ stream: true }))
-	.pipe(browserSync.reload());
+	.pipe(browserSync.reload({ stream: true }))
+	//.pipe(browserSync.reload());
 });
 
 // HTML Live Reload - автоматическая перезагрузка страницы после сохранения файла
@@ -83,7 +83,7 @@ if (gulpVersion == 4) {
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
-		gulp.watch('app/*.html', gulp.parallel('code'));
+		//gulpgulp.watch('app/*.html', gulp.parallel('code'));
 		gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
 	});
 	gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch')) 
