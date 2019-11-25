@@ -53,6 +53,7 @@ gulp.task('scripts', function() {
 	.pipe(uglify()) // Minify js (optional)
 	.pipe(gulp.dest('app/js')) 
 	.pipe(browserSync.reload({ stream: true }))
+	//.pipe(browserSync.reload());
 });
 
 // HTML Live Reload - автоматическая перезагрузка страницы после сохранения файла
@@ -77,36 +78,12 @@ gulp.task('rsync', function() {
 	}))
 });
 
-// Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)
-// Тут хз, работает ли
-gulp.task('img1x', function() {
-	return gulp.src('app/img/_src/**/*.*')
-	.pipe(imageResize({ width: '50%' }))
-	.pipe(imagemin())
-	.pipe(gulp.dest('app/img/@1x/'))
-});
-gulp.task('img2x', function() {
-	return gulp.src('app/img/_src/**/*.*')
-	.pipe(imageResize({ width: '100%' }))
-	.pipe(imagemin())
-	.pipe(gulp.dest('app/img/@2x/'))
-});
-
-// Clean @*x IMG's
-// И это
-gulp.task('cleanimg', function() {
-	return del(['app/img/@*'], { force:true })
-});
-
 if (gulpVersion == 4) {
-
-	// Img Processing Task for Gulp 4
-	gulp.task('img', gulp.parallel('img1x', 'img2x'));
 
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
-		gulp.watch('app/*.html', gulp.parallel('code'));
+		//gulpgulp.watch('app/*.html', gulp.parallel('code'));
 		gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
 	});
 	gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch')) 
