@@ -1,0 +1,48 @@
+.we {
+    background-image: url("../img/background/we.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.we__desc {
+    display: flex;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.we__desc-item {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.we__img-wrapper {
+    height: 125px;
+}
+
+.we__img-wrapper:last-of-type {
+    height: 120px;
+}
+
+
+.we__title {
+    margin-top: -90px;
+}
+
+.we__subtitle {
+    font-family: 'lifehack-medium';
+    font-size: 24px;
+    line-height: 1.17;
+    vertical-align: middle;
+}
+
+.we__paragraph {
+    height: 62px;
+    font-family: 'ubuntu-light';
+    line-height: 1.71;
+    font-size: 14px;
+    color: $grey;
+    vertical-align: middle;
+}

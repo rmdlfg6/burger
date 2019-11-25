@@ -1,0 +1,58 @@
+.reviews__list {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews__item {
+    flex-basis: 25%;
+    height: 50%;
+    position: relative;
+
+    &:hover {
+        .reviews__content {
+            opacity: 1;
+        }
+    }
+}
+
+.reviews__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.reviews__content {
+    opacity: 0;
+    color: $white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(20, 20, 20, 0.7);
+    padding: 50px 19px;
+    transition: opacity 0.4s;
+}
+
+
+.reviews__name {
+    font-family: 'gagalin-regular';
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.reviews__text {
+    font-family: 'ubuntu-light';
+    font-size: 14px;
+    line-height: 1.71;
+    margin-bottom: 17px;
+}
+
+.reviews__button {
+    font-family: 'ubuntu-medium';
+    background-color: $black;
+    border: none;
+}
