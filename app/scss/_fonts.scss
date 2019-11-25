@@ -1,7 +1,7 @@
 @import "_mixins/font-face";
 
-@include font-face("ubuntu-light", "../fonts/Ubuntu-Light");
-@include font-face("ubuntu-medium", "../fonts/Ubuntu-Medium");
-@include font-face("ubuntu-bold", "../fonts/Ubuntu-bold");
+@include font-face("ubuntu-light", "../fonts/ubuntu-Light");
+@include font-face("ubuntu-medium", "../fonts/ubuntu-Medium");
+@include font-face("ubuntu-bold", "../fonts/ubuntu-bold");
 @include font-face("gagalin-regular", "../fonts/gagalin-regular");
 @include font-face("lifehack-medium", "../fonts/lifehack");
