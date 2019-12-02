@@ -1,3 +1,5 @@
+@import "../../node_modules/normalize.css/normalize.css";
+
 @import "vars";
 @import "fonts";
 @import "header";
@@ -7,5 +9,11 @@
 @import "promo";
 @import "reviews";
 @import "we";
+@import "menu";
+@import "team";
+@import "map";
+@import "footer";
+@import "order";
+@import "fixed-menu";
 
 @import "media"; 
