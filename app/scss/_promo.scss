@@ -1,5 +1,5 @@
 .promo {
-    //height: 100vh;
+    height: 100vh;
     background-image: url("../img/background/promo.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +10,7 @@
 .promo__content {
     display: flex;
     align-items: center;
-    margin-top: -90px;
+   
 }
 
 .promo__title {
@@ -20,7 +20,7 @@
 
 .promo__subtitle {
     font-family: 'lifehack-medium';
-    //font-stretch: ultra-expanded;
+  
     margin-top: 30px;
     font-size: 56px;
     color: $white;

@@ -17,12 +17,6 @@
         display: block;
         margin-left: 15px;
     }
-
-    &:nth-last-child(2) {
-        &:after {
-            display: none;
-        }
-    }
 }
 
 .nav__link {
