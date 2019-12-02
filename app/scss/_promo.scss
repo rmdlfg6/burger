@@ -1,10 +1,12 @@
 .promo {
+<<<<<<< HEAD
     height: 100vh;
+=======
+>>>>>>> develop
     background-image: url("../img/background/promo.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    position: relative;
 }
 
 .promo__content {
@@ -37,4 +39,11 @@
     left: 50%;
     transform: translateX(-50%);
 
+}
+
+.promo__img-wrapper {
+    .promo__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
